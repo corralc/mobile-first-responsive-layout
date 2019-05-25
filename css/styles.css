@@ -1,0 +1,112 @@
+/* Elements */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Serif', serif;
+  background-color: #bcd8e2;
+}
+main{
+  background-color: white;
+  margin-top: 100px;
+}
+
+a:link{
+  color: black;
+  font-weight: bold;
+}
+
+a:visited{
+  color: grey;
+}
+
+p{
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+
+/* Classes */
+
+.name{
+  padding-top: 20px;
+}
+
+.greyed-text h2 {
+  color: black;
+}
+
+.middle-section {
+  padding: 35px 0 80px 0;
+}
+
+.greyed-text {
+  color: grey;
+}
+
+.navbar li{
+  background-color: white;
+  margin: 15px 0;
+  padding: 13px 50px;
+}
+
+.navbar a {
+  padding:10px 50px;
+}
+
+.navbar {
+  margin: 35px 0 55px 0;
+}
+
+.wrap{
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.portfolio-img{
+  width: 95%;
+  margin: 20px 0 10px 0;
+}
+
+.profile-pic{
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.name-footer {
+  float: left;
+}
+.to-top{
+  float: right;
+}
+
+.contact-list{
+margin: 40px 0;
+}
+
+.contact-list li{
+  margin-bottom: 20px;
+}
+
+.footer-action{
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a:hover{
+  color: #FED36E
+}
+
+
+@media (min-width: 768px ) {
+
+
+
+}
