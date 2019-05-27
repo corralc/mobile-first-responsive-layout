@@ -1,4 +1,4 @@
-/* Elements */
+
 *{
   box-sizing: border-box;
 }
@@ -17,27 +17,24 @@ a{
   font-weight: bold;
 }
 
-
 p{
   font-size: 1.125rem;
   line-height: 30px;
 }
 
-/* Classes */
 
 .name{
   padding-top: 20px;
 }
 
-.greyed-text h2 {
-  color: black;
-}
-
 .middle-section {
   padding: 35px 0 80px 0;
 }
+.middle-section h2{
+  margin-bottom: 50px;
+}
 
-.greyed-text {
+footer p, footer .contact-list, .intro p{
   color: grey;
 }
 
@@ -96,6 +93,14 @@ margin: 40px 0;
   clear: both;
   display: table;
 }
+.project{
+  margin-bottom: 30px;
+}
+
+.project p {
+  width: 80%;
+  margin: 0 auto;
+}
 
 a:hover{
   color: #FED36E
@@ -148,10 +153,27 @@ a:hover{
     width: 50%;
     float: left;
   }
+
 }
 
 @media (min-width: 1024px){
 
+  .name{
+    float: left;
+  }
 
-  
+  .navbar{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: right;
+  }
+
+  .intro{
+    margin-top: 35px;
+  }
+
+  .project{
+    width: 33%;
+  }
+
 }
