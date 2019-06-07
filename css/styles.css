@@ -1,99 +1,77 @@
-
-*{
+/* Universal Selector */
+* {
   box-sizing: border-box;
 }
 
-body{
-  font-family: 'PT Serif', serif;
-  background-color: #bcd8e2;
-}
-main{
-  background-color: white;
-  margin-top: 100px;
-}
-
-a{
-  color: black;
-  font-weight: bold;
-}
-
-p{
-  font-size: 1.125rem;
-  line-height: 30px;
-}
-
-
-.name{
-  padding-top: 20px;
-}
-
-.middle-section {
-  padding: 35px 0 80px 0;
-}
-.middle-section h2{
-  margin-bottom: 50px;
-}
-
-footer p, footer .contact-list, .intro p{
-  color: grey;
-}
-
-.navbar li{
-  background-color: white;
-  margin: 15px 0;
-  padding: 13px 50px;
-}
-
-.navbar a {
-  padding:10px 50px;
-}
-
-.navbar {
-  margin: 35px 0 55px 0;
-}
-
-.wrap{
+/*  Wrap/Body */
+.wrap {
   width: 95%;
   text-align: center;
   margin: 0 auto;
 }
 
-.portfolio-img{
-  width: 95%;
-  margin: 20px 0 10px 0;
+body {
+  font-family: 'PT Serif', serif;
+  background-color: #bcd8e2;
 }
 
-.profile-pic{
+/* Elements */
+main {
+  background-color: white;
+  margin-top: 100px;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 30px;
+}
+
+/* Navbar */
+.name {
+  padding: 20px 0;
+}
+
+.navbar li {
+  background-color: white;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.navbar a {
+  padding: 10px 50px;
+}
+
+/* Introduction Bio */
+.intro {
+  margin-top: 60px;
+}
+
+.profile-pic {
   width: 70%;
   margin-bottom: 20px;
 }
 
-.name-footer {
-  float: left;
-}
-.to-top{
-  float: right;
+/* Portfolio  */
+section[id="portfolio"] {
+  padding: 35px 0 80px 0;
 }
 
-.contact-list{
-margin: 40px 0;
+section[id="portfolio"] h2 {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.contact-list li{
-  margin-bottom: 20px;
+.portfolio-img {
+  width: 95%;
+  margin: 20px 0 10px 0;
 }
 
-.footer-action{
-  padding-bottom: 30px;
-  padding-top: 20px;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.project{
+.project {
   margin-bottom: 30px;
 }
 
@@ -102,77 +80,129 @@ margin: 40px 0;
   margin: 0 auto;
 }
 
-a:hover{
+/* Contact Info */
+.contact-list {
+  margin: 40px 0;
+}
+
+.contact-list li {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer-action {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-navbar {
+  display: none;
+}
+
+/* Texts */
+footer p, footer .contact-list, .intro p {
+  color: grey;
+}
+
+/* Hover State */
+a:hover {
   color: #FED36E
 }
 
-.footer-navbar{
-  display:none;
-}
+/* Media Query for Tablets */
+@media (min-width: 768px) {
 
-
-@media (min-width: 768px ) {
-  footer p {
-    width: 65%;
-    margin: 0 auto;
-  }
-  .to-top{
-    display:none;
+  /* Flex */
+  .top-page-nav, .navbar, .intro, .container {
+    display: flex;
   }
 
-  .navbar li, li a, .navbar, .footer-navbar, .footer-navbar li {
-    display: inline-block;
+  /* Navbar */
+  .top-page-nav {
+    flex-direction: column;
+    align-items: center;
   }
-  .footer-navbar{
-    float:right;
-    margin-top: 0;
-  }
-
-.footer-navbar li{
-  margin-left: 40px;
-}
 
   .navbar li {
     background-color: inherit;
     padding: 0;
     margin-left: 50px;
   }
-  .navbar a{
-    padding:0;
+
+  .navbar a {
+    padding: 0;
   }
-  .profile-pic{
-    width: 40%;
-    float: right;
-    margin-left: 30px;
+
+  .navbar {
+    flex-direction: row;
   }
+
+  /* Introduction Bio */
+  .intro {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
   .intro p {
-    text-align:justify;
-    width: 60%;
-  }
-  .project{
-    width: 50%;
-    float: left;
+    text-align: justify;
+    margin: 0;
+    flex-basis: 47%;
   }
 
+  .profile-pic {
+    margin-left: 30px;
+    flex-basis: 35%;
+  }
+
+  /* Portfolio */
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .project {
+    flex: 1 50%;
+  }
+
+  /* Footer */
+  footer p {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .to-top {
+    display: none;
+  }
+
+  .footer-navbar {
+    margin-top: 0;
+    display: flex;
+  }
+
+  .footer-navbar li {
+    margin-left: 40px;
+  }
 }
-@media (min-width: 1024px){
 
-  .name{
-    float: left;
+/* Media Query for Laptop and larger screens */
+@media (min-width: 1024px) {
+
+  /* Navbar */
+  .top-page-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .navbar{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    float: right;
+  /* Introduction Bio */
+  .intro {
+    justify-content: space-between;
   }
 
-  .intro{
-    margin-top: 35px;
+  /* Portfolio */
+  .project {
+    flex: 1 30%;
   }
-
-  .project{
-    width: 33%;
-  }
-
 }
